@@ -1,0 +1,18 @@
+{
+    "name": "SGBotic_Plant_Watering_System",
+    "version": "0.1",
+    "description": "Blocks to monitor moisture level of soil and switch on pump if level drop below threshold.",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "plant-watering.ts",
+        "base.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}

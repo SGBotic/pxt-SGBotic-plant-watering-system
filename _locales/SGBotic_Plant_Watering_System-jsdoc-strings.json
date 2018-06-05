@@ -1,0 +1,8 @@
+{
+  "SGBotic": "Makecode block for plant watering system\n\nSGBotic blocks",
+  "SGBotic.init_PWS": "Define pins that connect to sensor and water pump",
+  "SGBotic.pumpControl": "Start/stop water pump",
+  "SGBotic.readMoistureSensor": "Read moisture level",
+  "SGBotic.setPumpPower": "Set water pump power (25 to 100, default 100)",
+  "SGBotic.setPumpPower|param|pumpPower": "is to set the flow rate of water, eg: 100"
+}

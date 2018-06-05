@@ -1,0 +1,220 @@
+{
+ "byQName": {
+  "SGBotic": {
+   "kind": 5,
+   "namespace": "",
+   "name": "SGBotic",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "weight": 100,
+    "color": "#f47820",
+    "icon": "",
+    "paramHelp": {},
+    "jsDoc": "Makecode block for plant watering system\n\nSGBotic blocks",
+    "block": "SGBotic"
+   },
+   "pkg": null,
+   "retType": "",
+   "parameters": null,
+   "qName": "SGBotic"
+  },
+  "SGBotic.pumpStatEnum": {
+   "kind": 6,
+   "namespace": "SGBotic",
+   "name": "pumpStatEnum",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "pumpStatEnum"
+   },
+   "pkg": null,
+   "retType": "SGBotic.pumpStatEnum",
+   "parameters": null,
+   "qName": "SGBotic.pumpStatEnum"
+  },
+  "SGBotic.pumpStatEnum.On": {
+   "kind": 7,
+   "namespace": "SGBotic.pumpStatEnum",
+   "name": "On",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "On",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "On"
+   },
+   "pkg": null,
+   "retType": "SGBotic.pumpStatEnum",
+   "parameters": null,
+   "qName": "SGBotic.pumpStatEnum.On"
+  },
+  "SGBotic.pumpStatEnum.Off": {
+   "kind": 7,
+   "namespace": "SGBotic.pumpStatEnum",
+   "name": "Off",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "block": "Off",
+    "paramHelp": {},
+    "jsDoc": "",
+    "_name": "Off"
+   },
+   "pkg": null,
+   "retType": "SGBotic.pumpStatEnum",
+   "parameters": null,
+   "qName": "SGBotic.pumpStatEnum.Off"
+  },
+  "SGBotic.init_PWS": {
+   "kind": 3,
+   "namespace": "SGBotic",
+   "name": "init_PWS",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "subcategory": "Plant-Watering-System",
+    "blockId": "PWS_init",
+    "block": "Plant Watering System| connect moisture sensor to %pinMoisture| water pump to %pinMPump",
+    "weight": 100,
+    "blockExternalInputs": "true",
+    "blockGap": "8",
+    "paramHelp": {},
+    "jsDoc": "Define pins that connect to sensor and water pump",
+    "_name": "init_PWS"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "pinMoisture",
+     "description": "",
+     "type": "AnalogPin",
+     "options": {},
+     "isEnum": true
+    },
+    {
+     "name": "pinMPump",
+     "description": "",
+     "type": "AnalogPin",
+     "options": {},
+     "isEnum": true
+    }
+   ],
+   "snippet": "init_PWS(null, null)",
+   "qName": "SGBotic.init_PWS"
+  },
+  "SGBotic.pumpControl": {
+   "kind": 3,
+   "namespace": "SGBotic",
+   "name": "pumpControl",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "subcategory": "Plant-Watering-System",
+    "blockId": "PWS_pumpControl",
+    "block": "water pump %pumpStat",
+    "weight": 80,
+    "blockGap": "8",
+    "paramHelp": {},
+    "jsDoc": "Start/stop water pump",
+    "_name": "pumpControl"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "pumpStat",
+     "description": "",
+     "type": "SGBotic.pumpStatEnum",
+     "options": {},
+     "isEnum": true
+    }
+   ],
+   "snippet": "pumpControl(null)",
+   "qName": "SGBotic.pumpControl"
+  },
+  "SGBotic.readMoistureSensor": {
+   "kind": 3,
+   "namespace": "SGBotic",
+   "name": "readMoistureSensor",
+   "attributes": {
+    "paramDefl": {},
+    "callingConvention": 0,
+    "_source": null,
+    "subcategory": "Plant-Watering-System",
+    "blockId": "PWS_readMoistureSensor",
+    "block": "moisture",
+    "weight": 90,
+    "blockGap": "8",
+    "paramHelp": {},
+    "jsDoc": "Read moisture level",
+    "_name": "readMoistureSensor"
+   },
+   "pkg": null,
+   "retType": "number",
+   "parameters": [],
+   "snippet": "readMoistureSensor()",
+   "qName": "SGBotic.readMoistureSensor"
+  },
+  "SGBotic.setPumpPower": {
+   "kind": 3,
+   "namespace": "SGBotic",
+   "name": "setPumpPower",
+   "attributes": {
+    "paramDefl": {
+     "pumpPower": "100"
+    },
+    "callingConvention": 0,
+    "_source": null,
+    "subcategory": "Plant-Watering-System",
+    "blockId": "PWS_setPumpPower",
+    "block": "pump power %pumpPower",
+    "weight": 70,
+    "blockGap": "8",
+    "paramMin": {
+     "pumpPower": "25"
+    },
+    "paramMax": {
+     "pumpPower": "100"
+    },
+    "paramHelp": {
+     "pumpPower": "is to set the flow rate of water, eg: 100"
+    },
+    "jsDoc": "Set water pump power (25 to 100, default 100)",
+    "_name": "setPumpPower"
+   },
+   "pkg": null,
+   "retType": "void",
+   "parameters": [
+    {
+     "name": "pumpPower",
+     "description": "is to set the flow rate of water, eg: 100",
+     "type": "number",
+     "initializer": "100",
+     "default": "100",
+     "options": {
+      "min": {
+       "value": "25"
+      },
+      "max": {
+       "value": "100"
+      }
+     },
+     "isEnum": false
+    }
+   ],
+   "snippet": "setPumpPower(100)",
+   "qName": "SGBotic.setPumpPower"
+  }
+ }
+}

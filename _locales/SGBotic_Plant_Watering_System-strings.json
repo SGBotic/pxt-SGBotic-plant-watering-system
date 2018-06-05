@@ -1,0 +1,10 @@
+{
+  "SGBotic.init_PWS|block": "Plant Watering System| connect moisture sensor to %pinMoisture| water pump to %pinMPump",
+  "SGBotic.pumpControl|block": "water pump %pumpStat",
+  "SGBotic.pumpStatEnum.Off|block": "Off",
+  "SGBotic.pumpStatEnum.On|block": "On",
+  "SGBotic.readMoistureSensor|block": "moisture",
+  "SGBotic.setPumpPower|block": "pump power %pumpPower",
+  "SGBotic|block": "SGBotic",
+  "{id:category}SGBotic": "SGBotic"
+}
